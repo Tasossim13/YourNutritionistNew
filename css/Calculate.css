@@ -1,0 +1,136 @@
+@import url("responsive.css");
+
+body {
+    background-color: white;
+    color: aliceblue;
+}
+
+p{
+  color: #111;
+}
+
+ul > li {
+  font-size:calc(0.9vw + 0.9vh);
+}
+
+.logo{
+  padding-left: 10px;
+  width: 50px;
+  height: 4%;
+}
+
+select{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: beige;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    
+  }
+        
+  li {float: left;}
+        
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size:larger;
+  }
+        
+        li a:hover:not(.active) {
+          background-color: #248f24;
+        }
+        
+  .active {
+    background-color: #248f24;
+    color: white;
+  }
+
+  
+  /* Add padding to containers */
+  .container {
+    box-sizing: border-box;
+    margin: auto;
+    width: 75%;
+    padding: 16px;
+    background-color: #333;
+  }
+  
+  /* Full-width input fields */
+  input[type=number]{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: beige;
+  }
+  
+  input[type=number]:focus{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #ddd;
+    outline: none;
+  }
+
+    /* Set a style for the submit button */
+    .registerbtn {
+        box-sizing: border-box;
+        width: 95%;
+        background-color: #248f24;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+      }
+      
+      .registerbtn:hover {
+        box-sizing: border-box;
+        width: 100%;
+        opacity: 1;
+      }
+
+      .logo{
+        padding-left: 10px;
+      }
+
+      img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 33%;
+      }
+
+      footer {
+        display: block;
+        width: 100%;
+        height: 60px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+
+.logo2{
+  width: 50%;
+} 
+  
+.container > img{
+  width: 10vw;
+}

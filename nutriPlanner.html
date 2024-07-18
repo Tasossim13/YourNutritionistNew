@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/nutriPlanner.css">
+    <script src="menu.js"></script>
+    <script src="nutriPlanner.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="pics/avocado.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Nutri-Planner</title>
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <ul class="nav-links">
+        <li><a class="active2" href="index.html">Home</a></li>
+        <li><a  href="nutriPlanner.html">Smart Nutri-Planner</a></li>
+        <li><a href="Recipes.html">Suggested Recipes</a></li>
+        <li><a href="Calculate.html">Calculate Calories</a></li>
+        <li style="float:right"><a class="active" href="register.html">Sign in/Register</a></li>
+        <li class="icon">
+        <a onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+    </li>
+    </ul>
+</div>    
+<br>
+<div id="user1"></div>
+<form action="/submit">
+ <div class="container"> 
+    <img src="pics/fitness.png" >
+    <h2>Some information about you!</h2>
+        <label for="weight">Weight (Kg):</label>
+        <input type="number" id="weight" name="weight" placeholder="Enter your Weight:" required>
+        
+        <label for="height">Height (Cm):</label>
+        <input type="number" id="height" name="height" placeholder="Enter your Height:" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Enter your Age:"  required>
+
+        <label for="choice">Your Goal is:</label>
+        <select id="choiceId" name="choice" required>
+            <option value="" disabled selected>Select goal:</option>
+            <option value="lose">To lose weight</option>
+            <option value="gain">To Gain weight</option>
+            <option value="maintain">To Keep my weight</option>
+        </select>
+
+        <label for="gender">Gender</label>
+        <select id="genderId" name="gender" required>
+            <option value="" disabled selected>Select Gender:</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <label for="exercise">How often do you exercise?</label>
+        <select id="exerciseId" name="exercise" required>
+            <option value="" disabled selected>Select exercise frequency:</option>
+            <option value="never">Never(0-1 days a week)</option>
+            <option value="rarely">Rarely(1-2 days a week)</option>
+            <option value="sometimes">Sometimes(3-4 days a week)</option>
+            <option value="often">Often(5-6 days a week)</option>
+            <option value="everyDay">Every Day(7 days a week)</option>
+        </select>
+
+        <label for="diet">What is your diet preference?</label>
+        <select id="dietId" name="diet" required>
+            <option value="" disabled selected>Select:</option>
+            <option value="is_omni">Omni</option>
+            <option value="is_vegetarian">Vegetarian</option>
+            <option value="is_vegan">Vegan</option>
+            <option value="is_pescatarian">Pescatarian</option>
+            <option value="is_keto">Keto</option>
+        </select>
+
+        <label for="meals_per">How many times per day do you like to eat?</label>
+        <select id="meals_perId" name="meals_per" required>
+            <option value="" disabled selected>Select:</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <label for="allergy_form"> Do you have any allergies?</label>
+        <div class="allergy_form">
+            <label>
+                <input type="checkbox" id="lac_int" class="checkbox" value="1">
+                Lactose Intolerance
+            </label>
+            <label>
+                <input type="checkbox" id="nut_all" class="checkbox" value="2">
+                Nut Allergy
+            </label>
+            <label>
+                <input type="checkbox" id="cel_dis" class="checkbox" value="3">
+                Celiacs Disease
+            </label>
+            <label>
+                <input type="checkbox" id="shell_all" class="checkbox" value="4">
+                Shellfish Allergy
+            </label>
+        </div>   
+        <button type="button" class="registerbtn" onclick="return storeInput()">Generate Nutrition Schedule</button>
+ </div>
+</form>
+<br>
+
+<h1 style="text-align: center; color: #333;">Daily Program</h1>
+<h3></h3>
+<hr>
+<div class="meal-plan-container">
+    <table id="meal-plan">
+    </table>
+</div>
+
+<footer>
+    <p><b>YourNutritionist 2024® </b><br></p>
+</footer>
+</body>
+</html>

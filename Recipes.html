@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="menu.js"></script>
+    <link rel="icon" type="image/x-icon" href="pics/avocado.png">
+    <link rel="stylesheet" href="css/Recipes.css">
+    <script src="recipeScript.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggested Recipes</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <ul class="nav-links">
+            <li><a class="active2" href="index.html">Home</a></li>
+            <li><a href="nutriPlanner.html">Smart Nutri-Planner</a></li>
+            <li><a href="Recipes.html">Suggested Recipes</a></li>
+            <li><a href="Calculate.html">Calculate Calories</a></li>
+            <li style="float:right"><a class="active" href="register.html">Sign in/Register</a></li>
+            <li class="icon">
+            <a onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        </li>
+        </ul>
+    </div>
+<br>
+<form class="recipeForm" id="RecipeForm">
+    <div class="container">
+      <img src="pics/avocado.png" >
+      <h1 id="recipeFormText">Choose Ingredients you like and we will show you Recipes including them.</h1>
+      <hr>
+      <label for="fruitsChoice">Choose Fruits:</label>
+      <select name="fruitsChoice" id="fruitId">
+        <option value="" disabled selected>Select a Fruit:</option>
+        <option value="banana">Banana</option>
+        <option value="apple">Apple</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="watermelon">Watermelon</option>
+      </select>
+      <select name="fruitsChoice2" id="fruitId2">
+        <option value="" disabled selected>Select a Fruit</option>
+        <option value="banana">Banana</option>
+        <option value="apple">Apple</option>
+        <option value="strawberry">Strawberry</option>
+        <option value="watermelon">Watermelon</option>
+      </select>
+      
+      <label for="VegesChoice">Choose Vegetables:</label>
+      <select name="VegesChoice" id="VegetableId">
+        <option value="" disabled selected>Select a Vegetable</option>
+        <option value="potato">Potato</option>
+        <option value="onion">Onion</option>
+        <option value="tomato">Tomato</option>
+        <option value="broccoli">Broccoli</option>
+      </select>
+      <select name="VegesChoice2" id="VegetableId2">
+        <option value="" disabled selected>Select a Vegetable</option>
+        <option value="potato">Potato</option>
+        <option value="onion">Onion</option>
+        <option value="tomato">Tomato</option>
+        <option value="broccoli">Broccoli</option>
+      </select>
+
+      
+      <label for="meatChoice">Choose Meat:</label>
+      <select name="meatChoice" id="meatId">
+        <option value="" disabled selected>Select a Meat</option>
+        <option value="chicken">Chicken</option>
+        <option value="pork">Pork</option>
+        <option value="bacon">Bacon</option>
+        <option value="sausage">Sausage</option>
+      </select>
+      <label for="meatChoice2">Choose Meat:</label>
+      <select name="meatChoice2" id="meatId2">
+        <option value="" disabled selected>Select a Meat</option>
+        <option value="chicken">Chicken</option>
+        <option value="pork">Pork</option>
+        <option value="bacon">Bacon</option>
+        <option value="sausage">Sausage</option>
+      </select>
+    <hr> 
+
+    <button onclick="return showInput()" class="registerbtn">Find me Recipes</button>
+    </div>
+  </form>
+<br>
+
+<h1>Recipes</h1>
+<hr>
+<ul id="recipe-list"></ul>
+<br>
+<footer>
+    <p><b>YourNutritionist</b></p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,190 @@
+@import url("responsive.css");
+
+body{
+    background-repeat: no-repeat;
+    width: 97.7vw;
+    
+}
+
+ul {
+    list-style-type: none;
+    margin: 2px;
+    padding: 2px;
+    overflow: hidden;
+    background-color: #333;
+    
+  }
+
+  ul > li {
+    font-size:calc(0.9vw + 0.9vh);
+  }
+        
+  li {float: left;}
+        
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: larger;
+  }
+        
+        li a:hover:not(.active) {
+          background-color: #248f24;
+        }
+        
+  .active {
+    background-color: #248f24;
+    color: white;
+  }
+
+  label{
+    color: aliceblue;
+  }
+
+  .container {
+    box-sizing: border-box;
+    margin: auto;
+    width: 75%;
+    padding: 16px;
+    background-color: #333;
+  }
+  
+  /* Full-width input fields */
+  input[type=number],select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: beige;
+  }
+
+  input[type=radio]{
+    display: inline-block;
+  }
+  
+  input[type=number]:focus, select:focus {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #ddd;
+    outline: none;
+  }
+
+    /* Set a style for the submit button */
+    .registerbtn {
+        box-sizing: border-box;
+        width: 95%;
+        background-color: #248f24;
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+      }
+      
+      .registerbtn:hover {
+        box-sizing: border-box;
+        width: 100%;
+        opacity: 1;
+      }
+      
+      footer {
+        display: block;
+        width: 100%;
+        height: 60px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+.container > img {
+  width: 20vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meal-plan-container {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 1200px;
+  height:  500px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+#meal-plan {
+  width: 100%;
+  border-collapse: collapse;
+  height:  500px;
+}
+
+#meal-plan th, #meal-plan td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#meal-plan th {
+  background-color: #248f24;
+  color: #f9f9f9;
+  font-weight: bold;
+}
+
+#meal-plan td {
+  background-color: #fff;
+}
+
+#meal-plan tbody tr:nth-child(odd) td {
+  background-color: #f9f9f9;
+}
+
+.container > h2{
+  color:#f9f9f9;
+  text-align: center;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+.form-container h2 {
+  text-align: center;
+}
+.allergy_form {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.allergy_form label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: normal;
+}
+.allergy_form input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+label{
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
