@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Script loaded');
-    fetch('http://localhost:27017/recipes')
+    fetch('/nutriJson')
         .then(response => response.json())
         .then(data => {
             const recipeList = document.getElementById('recipe-list');

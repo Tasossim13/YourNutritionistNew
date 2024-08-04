@@ -31,8 +31,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
-  
+  background-color: #111415;
 }
       
 li {float: left;}
@@ -89,7 +88,8 @@ footer {
 
 .logo2{
   width:auto;
-  height: 5%;
+  height: 4%;
+
 }
 
 .flex-container2 {
