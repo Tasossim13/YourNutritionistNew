@@ -17,6 +17,32 @@ img{display: block;
   transition: 0.3s ease;
 }
 
+.topnav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-links li {
+  float: left;
+}
+
+.nav-links li a {
+  display: block;
+  color: whitesmoke;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
 ul > li {
   font-size:calc(0.9vw + 0.9vh);
 }
@@ -31,16 +57,13 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #111415;
 }
       
 li {float: left;}
       
 li a {
   display: block;
-  color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
   font-size: larger;
 }
@@ -86,10 +109,9 @@ footer {
   padding-left: 10px;
 }
 
-.logo2{
-  width:auto;
-  height: 4%;
-
+.logo2 {
+  width: 100%;
+  height: auto;
 }
 
 .flex-container2 {
