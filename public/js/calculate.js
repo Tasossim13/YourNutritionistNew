@@ -42,3 +42,42 @@ Super Active (very hard exercise/sports, physical job, or training): TDEE = BMR 
 Για άντρες: BMR = (10 × βάρος σε κιλά) + (6.25 × ύψος σε εκατοστά) - (5 × ηλικία σε έτη) + 5
 Για γυναίκες: BMR = (10 × βάρος σε κιλά) + (6.25 × ύψος σε εκατοστά) - (5 × ηλικία σε έτη) - 161*/
 }
+
+let currentStep = 0;
+
+function showStep(step) {
+    const steps = document.querySelectorAll('.step');
+    steps.forEach((stepElement, index) => {
+        if (index === step) {
+            stepElement.classList.add('active');
+            stepElement.classList.remove('fade-out');
+        } else {
+            stepElement.classList.add('fade-out');
+            setTimeout(() => {
+                stepElement.classList.remove('active');
+            }, 500); // the timeout should match the CSS transition duration
+        }
+    });
+    console.log('Showing step:', step);
+}
+
+function nextStep() {
+    const steps = document.querySelectorAll('.step');
+    if (currentStep < steps.length - 1) {
+        currentStep++;
+        showStep(currentStep);
+        console.log('Moved to step:', currentStep);
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('multistepForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Η φόρμα υποβλήθηκε επιτυχώς!');
+        console.log('Form submitted');
+        // Μπορείς να προσθέσεις επιπλέον λειτουργικότητα εδώ, όπως αποστολή των δεδομένων της φόρμας σε έναν διακομιστή
+    });
+
+    showStep(currentStep);
+});

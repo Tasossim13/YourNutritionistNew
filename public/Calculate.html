@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="calculate.js"></script>
-    <script src="menu.js"></script>
+    <script src="js/calculate.js"></script>
+    <script src="js/menu.js"></script>
     <link rel="icon" type="image/x-icon" href="pics/avocado.png">
     <link rel="stylesheet" href="css/Calculate.css">
     <meta charset="UTF-8">
@@ -25,47 +25,30 @@
   </li>
   </ul>
 </div>
-    <br>    
-    
-    <form id="calculationForm">
-        <div class="container">
-          <img src="pics/avocado.png" >
-          <h1>Calculate your Daily Calories.</h1>
-          <hr>
-      
-          <label for="weight"><b>Weight:(Kg)</b></label>
-          <input type="number" placeholder="Enter Weight in Kg:" name="weightData" id="weight" required>
-      
-          <label for="height"><b>Height:(Cm)</b></label>
-          <input type="number" placeholder="Enter Height in Cm:" name="heightData" id="height" required>
+<br>    
 
-          <label for="age"><b>Age:</b></label>
-          <input type="number" placeholder="Enter your Age:" name="ageData" id="age" required>
-          
-          <label for="exercise">How often do you exercise?</label>
-          <select id="exerciseId" name="exercise" required>
-              <option value="" disabled selected>Select exercise frequency:</option>
-              <option value="never">Never(0-1 days a week)</option>
-              <option value="rarely">Rarely(1-2 days a week)</option>
-              <option value="sometimes">Sometimes(3-4 days a week)</option>
-              <option value="often">Often(5-6 days a week)</option>
-              <option value="everyDay">Every Day(7 days a week)</option>
-          </select>
-
-          <h3>Please select your Gender:</h3>
-		  <input type="radio" id="maleId" name="gender" value="male">
-          <label for="maleId">Male</label><br>
-
-          <input type="radio" id="femaleId" name="gender" value="female">
-          <label for="femaleId">Female</label><br>
-        <div id="userInput"></div>
-        <hr> 
-
-        <button onclick="return showInput()" class="registerbtn">Calculate My Calories</button>
-        </div>
-      </form>
-
-      <img class="logo2" src="pics/logo.png" >
+<div class="form-container">
+  <form id="multistepForm">
+      <div class="step active">
+          <label for="weight">Weight (Kg):</label>
+          <p>Δώστε το βάρος σας σε Κιλά</p>
+          <input type="number" id="weight" name="weight" required>
+          <button type="button" onclick="nextStep()">Επόμενο</button>
+      </div>
+      <div class="step">
+          <label for="height">Height (Cm):</label>
+          <p>Δώστε το βάρος σας σε Εκατοστά</p>
+          <input type="number" id="height" name="height" required>
+          <button type="button" onclick="nextStep()">Επόμενο</button>
+      </div>
+      <div class="step">
+          <label for="age">Age:</label>
+          <p>Δώστε την Ηλικία Σας</p>
+          <input type="number" id="age" name="age" required>
+          <button type="submit">Υποβολή</button>
+      </div>
+  </form>
+</div>
 
       
 
