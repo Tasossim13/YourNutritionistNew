@@ -12,7 +12,9 @@ body {
 }
 
 h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
+  font-style: oblique;
   color:#333;
 }
 
@@ -22,6 +24,11 @@ img{display: block;
     margin-right: auto;}
 
 .zoom:hover {
+  transform: scale(1.2);
+  transition: 0.3s ease;
+}
+
+.zoom2:hover{
   transform: scale(1.2);
   transition: 0.3s ease;
 }
@@ -58,6 +65,11 @@ ul > li {
 
 .zoom{
   width: 55%;
+  transition: 0.3s ease;
+}
+
+.zoom2{
+  width: 35%;
   transition: 0.3s ease;
 }
 
@@ -100,7 +112,8 @@ li a {
   filter:drop-shadow(0 0 25px #333);
   width: 30%;
   margin: 5%;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 20px;
 
 }
@@ -142,7 +155,16 @@ footer {
   flex: 0 0 calc(25% - 10px);
 }
 
+.flex-container1 > p {
+  color:black;
+  width: 85%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 figcaption{
+  text-align: center;
   color:#333;
   font-size: larger;
   font-family: fantasy;
