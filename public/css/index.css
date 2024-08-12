@@ -26,6 +26,7 @@ img{display: block;
 .zoom:hover {
   transform: scale(1.2);
   transition: 0.3s ease;
+  
 }
 
 .zoom2:hover{
@@ -64,11 +65,13 @@ ul > li {
 }
 
 .zoom{
+  cursor: pointer;
   width: 55%;
   transition: 0.3s ease;
 }
 
 .zoom2{
+  cursor: pointer;
   width: 35%;
   transition: 0.3s ease;
 }
@@ -156,6 +159,7 @@ footer {
 }
 
 .flex-container1 > p {
+  
   color:black;
   width: 85%;
   text-align: center;
@@ -168,4 +172,8 @@ figcaption{
   color:#333;
   font-size: larger;
   font-family: fantasy;
+}
+
+.hidden-text{
+  display: none;
 }
