@@ -1,8 +1,8 @@
 function toggleText(id) {
     var element = document.getElementById(id);
-    if (element.style.display === "none" || element.style.display === "") {
-        element.style.display = "block";
+    if (element.classList.contains("show")) {
+        element.classList.remove("show");
     } else {
-        element.style.display = "none";
+        element.classList.add("show");
     }
 }
