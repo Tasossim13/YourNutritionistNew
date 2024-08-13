@@ -32,24 +32,49 @@
       <div class="step active">
           <label for="weight">Weight (Kg):</label>
           <p>Δώστε το βάρος σας σε Κιλά</p>
-          <input type="number" id="weight" name="weight" required>
+          <input type="number" id="weight" name="weightData" required>
           <button type="button" onclick="nextStep()">Επόμενο</button>
       </div>
       <div class="step">
           <label for="height">Height (Cm):</label>
           <p>Δώστε το βάρος σας σε Εκατοστά</p>
-          <input type="number" id="height" name="height" required>
+          <input type="number" id="height" name="heightData" required>
           <button type="button" onclick="nextStep()">Επόμενο</button>
       </div>
+
       <div class="step">
           <label for="age">Age:</label>
           <p>Δώστε την Ηλικία Σας</p>
-          <input type="number" id="age" name="age" required>
-          <button type="button">Υποβολή</button>
+          <input type="number" id="age" name="ageData" required>
+          <button type="button" onclick="nextStep()">Επόμενο</button>
       </div>
+
+      <div class="step">
+        <label for="age">Gender:</label>
+        <p>Δώστε το Φύλο Σας</p>
+        <label for="maleId">Male</label>
+        <input type="radio" id="maleId" name="gender" value="male" required>
+        <label for="femaleId">Female</label>
+        <input type="radio" id="femaleId" name="gender" value="female" required>
+        <button type="button" onclick="nextStep()">Επόμενο</button>
+    </div>
+
+      <div class="step">
+        <label for="age">Exercise:</label>
+        <p>Πόσο συχνα αθλείστε</p>
+        <select id="exerciseId" name="exercise" required>
+        <option value="" disabled selected>Select exercise frequency:</option>
+        <option value="never">Never(0-1 days a week)</option>
+        <option value="rarely">Rarely(1-2 days a week)</option>
+        <option value="sometimes">Sometimes(3-4 days a week)</option>
+        <option value="often">Often(5-6 days a week)</option>
+        <option value="everyDay">Every Day(7 days a week)</option>
+        </select>
+      <button type="button" onclick="return showInput()">Υποβολή</button>
+    </div>
   </form>
 </div>
-
+<div id="userInput"></div>
       
 
   <footer>

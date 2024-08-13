@@ -87,6 +87,11 @@ ul {
     border-radius: 5px;
   }
 
+  .active:hover {
+    background-color: #333;
+    color:#248f24;
+  }
+
   
   /* Add padding to containers */
   .container {
@@ -114,9 +119,10 @@ ul {
     background-color: #ddd;
     outline: none;
   }
-      .logo{
-        padding-left: 10px;
-      }
+
+select{width: 80%;}
+
+
 
       img{
         display: block;
@@ -177,6 +183,7 @@ label {
 
 .step.active > p {
   padding-top: 10px;
+  color: white;
 }
 
 .step {
@@ -199,7 +206,7 @@ label {
 button {
   margin-top: 10px;
   padding: 8px 15px;
-  background-color: black;
+  background-color: #248f24;
   color: white;
   border: none;
   border-radius: 5px;
@@ -209,6 +216,7 @@ button {
 }
 
 button:hover{
-  background-color: #248f24;
+  background-color: white;
+  color:#248f24;
   cursor: pointer;
 }
