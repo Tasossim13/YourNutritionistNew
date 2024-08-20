@@ -1,3 +1,4 @@
+
 async function storeInput() {
     const weightChoice = document.getElementById('weight').value;
     const usersChoice = document.getElementById('choiceId').value; // User's goal (lose weight, gain weight, etc.)
@@ -49,13 +50,15 @@ async function storeInput() {
 
     try {
         for (const day of days) {
-            const response = await fetch('http://localhost:3001/get-recipes', {
+            const response = await fetch('http://localhost:3000', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({ calories, recipeCount }),
             });
+
+            
             const recipes = await response.json();
             console.log(`Recipes for ${day}:`, recipes);
 
@@ -166,7 +169,7 @@ function generateMealPlan(allRecipes, recipeCount) {
             const td = document.createElement('td');
             const recipes = allRecipes[day];
             const recipeIndex = rowIndex % recipes.length;
-            td.textContent = recipes[recipeIndex].name;
+            td.textContent = get-recipes.name;
             tr.appendChild(td);
         });
         tbody.appendChild(tr);

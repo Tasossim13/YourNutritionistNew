@@ -1,27 +1,52 @@
 const express = require('express');
-const path = require('path');
-const fs = require('fs');  
+const cors = require('cors'); // Προσθήκη του CORS
+const { MongoClient } = require('mongodb');
 
 const app = express();
-const port = 3001;
+const port = 3000;
 
-// Ορισμός του φακέλου που περιέχει τα στατικά αρχεία (HTML, CSS, JS)
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST']
+}));
 
-// Ρίζα διαδρομή για την αρχική σελίδα
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+app.use(express.json());
+
+const uri = "mongodb://localhost:27017";
+const dbName = 'yourNutritionistDataB';
+const collectionName = 'get-recipes';
+
+async function connectToDatabase() {
+    const client = new MongoClient(uri);
+    try {
+        await client.connect();
+        console.log("Connected to database!");
+        const db = client.db(dbName);
+        const collection = db.collection(collectionName);
+        return collection;
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+app.post('/', async (req, res) => {
+    try {
+        const { calories, recipeCount } = req.body;
+        // Σύνδεση με τη βάση δεδομένων και λήψη δεδομένων
+        res.json({ message: 'Success' });
+    } catch (error) {
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
 });
 
-// Διαδρομή για το αρχείο JSON
-app.get('/nutriJson', (req, res) => {
-    fs.readFile(path.join(__dirname, 'public', 'nutriJson.json'), 'utf8', (err, data) => {
-        if (err) {
-            res.status(500).send('Error reading the JSON file');
-        } else {
-            res.json(JSON.parse(data));
-        }
-    });
+app.get('/', async (req, res) => {
+    const collection = await connectToDatabase();
+    const data = await collection.find({}).toArray();
+    res.json(data);
+});
+
+app.get('/', (req, res) => {
+    res.send('<h1>Welcome to the MongoDB Data Viewer</h1><a href="/data">View Data</a>');
 });
 
 app.listen(port, () => {

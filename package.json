@@ -85,7 +85,7 @@
     "whatwg-url": "^13.0.0"
   },
   "scripts": {
-    "dev":"nodemon server1.js",
+    "dev": "nodemon server1.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
