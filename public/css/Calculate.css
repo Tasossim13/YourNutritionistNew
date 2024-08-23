@@ -248,25 +248,31 @@ h2,h4{
   padding: 10px;
 }
 
-.flex-container > img {
+.flex-container > div {
   width: 35%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.flex-container > div:hover{
+  transform: scale(1.2);
+  transition: 0.3s ease;
+}
+
+.flex-container > div > p{
+  color:#248f24;
+  text-align: center;
 }
 
 .iconImages{
   padding-top: 20px;
   width: 25%;
   cursor: pointer;
-  transition: 0.3s ease;
 }
 
-.iconImages:hover {
-  transform: scale(1.2);
-  transition: 0.3s ease;
-  
-}
 
 @media screen and (max-width: 600px) {
-  .flex-container > img {
+  .flex-container > div {
     width: 50%;
   }
 }
