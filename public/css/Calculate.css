@@ -51,7 +51,7 @@ select{
   box-sizing: border-box;
   width: 100%;
   padding: 15px;
-  margin: 5px 0 22px 0;
+  margin: 3px 0 12px 0;
   display: inline-block;
   border: none;
   background: beige;
@@ -254,20 +254,28 @@ h2,h4{
   transition: 0.3s ease;
 }
 
-.flex-container > div:hover{
+.flex-container > div > img:hover{
   transform: scale(1.2);
   transition: 0.3s ease;
 }
 
-.flex-container > div > p{
+.flex-container > div > select{
   color:#248f24;
   text-align: center;
+  margin-left: auto; /* Κεντράρισμα */
+  margin-right: auto;
+  display: block;
 }
 
 .iconImages{
   padding-top: 20px;
   width: 25%;
   cursor: pointer;
+}
+
+.flex-container > div > label {
+  color:#248f24;
+  text-align: center;
 }
 
 
