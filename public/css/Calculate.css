@@ -37,19 +37,6 @@ body {
   border-radius: 5px;
 }
 
-.iconImages{
-  padding-top: 20px;
-  width: 25%;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.iconImages:hover {
-  transform: scale(1.2);
-  transition: 0.3s ease;
-  
-}
-
 ul > li {
   font-size:calc(0.9vw + 0.9vh);
 }
@@ -248,4 +235,38 @@ h2,h4{
 .userInput{
   color: #248f24;
   text-align: center;
+}
+
+.flex-container{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px; /* Απόσταση μεταξύ των εικόνων */
+  padding: 10px;
+}
+
+.flex-container > img {
+  width: 35%;
+}
+
+.iconImages{
+  padding-top: 20px;
+  width: 25%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.iconImages:hover {
+  transform: scale(1.2);
+  transition: 0.3s ease;
+  
+}
+
+@media screen and (max-width: 600px) {
+  .flex-container > img {
+    width: 50%;
+  }
 }
