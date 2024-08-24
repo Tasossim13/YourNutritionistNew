@@ -84,4 +84,42 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     showStep(currentStep);
+
+    let count = calories;
+    const selectElement = document.getElementById('fruits');
+    const userInputElement2 = document.getElementById('userInput2');
+
+    selectElement.addEventListener('change', function() {
+        let subtractValue = 0;
+
+        switch (selectElement.value) {
+            case 'apple':
+                subtractValue = 100; 
+                break;
+            case 'banana':
+                subtractValue = 200; 
+                break;
+            case 'mango':
+                subtractValue = 300; 
+                break;
+            case 'watermelon':
+                subtractValue = 400; 
+                break;
+            default:
+                subtractValue = 0;
+        }
+
+        if (calories >= subtractValue) {  // Εξασφαλίζει ότι ο αριθμός δεν θα πάει κάτω από το μηδέν
+            calories -= subtractValue; // Αφαίρεση συγκεκριμένου αριθμού
+            userInputElement2.innerHTML = `<h3>You Have ${calories} Calories Left</h3>`; // Ενημέρωση του υπόλοιπου
+        }
+    });
+});
+
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') { 
+        event.preventDefault(); // Αποτρέπει την προεπιλεγμένη συμπεριφορά του Enter (π.χ. υποβολή φόρμας)
+        nextStep(); // Καλεί τη συνάρτηση για να πάει στο επόμενο βήμα
+    }
 });
