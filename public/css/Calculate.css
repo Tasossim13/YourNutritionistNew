@@ -233,6 +233,11 @@ h2,h4{
   text-align: center;
 }
 
+.userInput2{
+  color: #248f24;
+  text-align: center;
+}
+
 .flex-container{
   margin-left: auto;
   margin-right: auto;

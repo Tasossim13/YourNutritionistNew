@@ -1,3 +1,4 @@
+var calories=0;
 function showInput() {
     const weight = document.getElementById('weight').value;
     const height = document.getElementById('height').value;
@@ -15,8 +16,11 @@ function showInput() {
     }
 
     const userInputElement = document.getElementById('userInput');
+    const userInputElement2 = document.getElementById('userInput2');
     if(gender=="male" || gender=="female"){
-        userInputElement.innerHTML = `<h3>You Should Eat ${calculateDailyCalories(gender,weight,height,age, exercise)} Calories Per Day!</h3>`;
+        calories = calculateDailyCalories(gender,weight,height,age, exercise); 
+        userInputElement.innerHTML = `<h3>You Should Eat ${calories} Calories Per Day!</h3>`;
+        userInputElement2.innerHTML = `<h3>You Should Eat ${calories} Calories Left</h3>`;
     }else{
         userInputElement.innerHTML = `<h3>Gender Is Not Specified! </h3>`;
     }
