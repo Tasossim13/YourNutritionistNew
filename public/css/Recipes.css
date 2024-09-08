@@ -3,7 +3,7 @@
 body {
     background-color: white;
     color: aliceblue;
-    background-image: url('../pics/fruitGreen.jpg');
+
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -13,8 +13,10 @@ ul > li {
   font-size:calc(0.9vw + 0.9vh);
 }
 
-h1:not(#recipeFormText){
-  color:#333;
+
+h1{
+  color:aliceblue;
+  font-family:Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
@@ -30,29 +32,8 @@ h1:not(#recipeFormText){
   background-color: #f9f9f9;
   opacity: 0.9;
 }
-.recipe-title {
-  text-align: center;
-  font-size: 1.2em;
-  margin-bottom: 10px;
-}
-.recipe-ingredients {
-  margin-left: 20px;
-}
 
-.recipe-ingredients li{
-  margin-bottom: 15px;
-  background-color: #ddd;
-}
-
-.recipe-instructions {
-  margin-top: 10px;
-}
-
-#recipeFormText{
-  text-align: center;
-}
-
-ul:not(#recipe-list) {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -75,7 +56,7 @@ ul:not(#recipe-list) {
   }
   
         
-  li {float: left;}
+  li{float: left;}
         
   li a {
     display: block;
@@ -103,6 +84,9 @@ footer{
   color: white;
   text-align: center;
   padding: 10px;
+  position:absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .container {
@@ -120,40 +104,29 @@ footer{
   display: block;
 }
 
-/* Full-width input fields */
-select{
-  box-sizing: border-box;
+.recipeNav{
+  color:aliceblue;
   width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: beige;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  justify-content: center;
+  background-color: #333;
 }
 
-select:focus{
-  box-sizing: border-box;
-  width: 100%;
-  background-color: #ddd;
-  outline: none;
+.recipeNav > li {
+  margin: 0 10px; 
 }
 
-  /* Set a style for the submit button */
-  .registerbtn {
-      box-sizing: border-box;
-      width: 95%;
-      background-color: #248f24;
-      color: white;
-      padding: 16px 20px;
-      margin: 8px 0;
-      border: none;
-      cursor: pointer;
-      width: 100%;
-      opacity: 0.9;
-    }
-    
-    .registerbtn:hover {
-      box-sizing: border-box;
-      width: 100%;
-      opacity: 1;
-    }
+.recipeNav > li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: larger;
+}
+
+.recipeNav > li .active {
+  background-color: #248f24;
+}

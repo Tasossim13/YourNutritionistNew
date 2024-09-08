@@ -27,46 +27,18 @@
         </ul>
     </div>
 <br>
-<form class="recipeForm" id="RecipeForm">
     <div class="container">
-      <img src="pics/avocado.png" >
-      <h1 id="recipeFormText">Choose Ingredients you like and we will show you Recipes including them.</h1>
-      <hr>
-      <label for="fruitsChoice">Choose Fruit:</label>
-      <select name="fruitsChoice" id="fruitId">
-        <option value="" disabled selected>Select a Fruit:</option>
-        <option value="banana">Banana</option>
-        <option value="apple">Apple</option>
-        <option value="strawberry">Strawberry</option>
-        <option value="watermelon">Watermelon</option>
-      </select>
-      
-      <label for="VegesChoice">Choose Vegetables:</label>
-      <select name="VegesChoice" id="VegetableId">
-        <option value="" disabled selected>Select a Vegetable</option>
-        <option value="potato">Potato</option>
-        <option value="onion">Onion</option>
-        <option value="tomato">Tomato</option>
-        <option value="broccoli">Broccoli</option>
-      </select>
-      
-      <label for="meatChoice">Choose Meat:</label>
-      <select name="meatChoice" id="meatId">
-        <option value="" disabled selected>Select a Meat</option>
-        <option value="chicken">Chicken</option>
-        <option value="pork">Pork</option>
-        <option value="bacon">Bacon</option>
-        <option value="sausage">Sausage</option>
-      </select>
-      <label for="meatChoice2">Choose Meat:</label>
-    <hr> 
-
-    <button onclick="return showRecipes()" class="registerbtn">Find me Recipes</button>
+      <h1>Choose Category</h1>
+      <img src="pics/meal.png" >
+      <ul class="recipeNav" id="recipeNav">
+        <li><a href="">Fruits</a></li>
+        <li><a href="">Veges</a></li>
+        <li><a href="">Meats</a></li>
+      </ul>
     </div>
-  </form>
 <br>
 
-<h1>Recipes</h1>
+<h1 style="color: #333;">Recipes</h1>
 <hr>
 <ul id="recipe-list"></ul>
 <br>
