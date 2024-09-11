@@ -31,10 +31,21 @@
       <h1>Choose Category</h1>
       <img src="pics/meal.png" >
       <ul class="recipeNav" id="recipeNav">
-        <li><a href="">Fruits</a></li>
-        <li><a href="">Veges</a></li>
-        <li><a href="">Meats</a></li>
+        <li><a href="#" onclick="showFruits(); return false;">Fruits</a></li>
+        <li><a href="#">Vegetables</a></li>
+        <li><a href="#">Meats</a></li>
       </ul>
+    </div>
+
+    <div id="fruitSelect" style="display:none;">
+        <label for="fruits">Choose a fruit:</label>
+        <select id="fruits">
+          <option value="apple">Apple</option>
+          <option value="banana">Banana</option>
+          <option value="orange">Orange</option>
+          <option value="strawberry">Strawberry</option>
+        </select>
+      </div>
     </div>
 <br>
 

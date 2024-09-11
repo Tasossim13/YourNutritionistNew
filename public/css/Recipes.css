@@ -125,8 +125,13 @@ footer{
   padding: 14px 16px;
   text-decoration: none;
   font-size: larger;
+  padding-top: 10px;
 }
 
 .recipeNav > li .active {
   background-color: #248f24;
+}
+
+.container > ul > li {
+  border-style:groove;
 }
