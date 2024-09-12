@@ -42,11 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => console.error('Error fetching recipes:', error));
 });
 
-  function showFruits() {
-    var fruitSelect = document.getElementById('fruitSelect');
-    if (fruitSelect.style.display === "none") {
-      fruitSelect.style.display = "block";
-    } else {
-      fruitSelect.style.display = "none";
-    }
+
+function showFruits() {
+  var fruitSelect = document.getElementById('fruitSelect');
+  if (fruitSelect.style.display === "none") {
+    fruitSelect.style.display = "block";
+  } else {
+    fruitSelect.style.display = "none";
   }
+}

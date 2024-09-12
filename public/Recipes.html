@@ -31,23 +31,46 @@
       <h1>Choose Category</h1>
       <img src="pics/meal.png" >
       <ul class="recipeNav" id="recipeNav">
-        <li><a href="#" onclick="showFruits(); return false;">Fruits</a></li>
-        <li><a href="#">Vegetables</a></li>
-        <li><a href="#">Meats</a></li>
+        <li><a href="#" onclick="showFruits()">Fruits</a></li>
+        <li><a href="#" onclick="showVegetables()">Vegetables</a></li>
+        <li><a href="#" onclick="showMeats()">Meats</a></li>
       </ul>
-    </div>
-
-    <div id="fruitSelect" style="display:none;">
-        <label for="fruits">Choose a fruit:</label>
+      <div id="fruitSelect" style="display:none;">
+        <label for="fruits">Choose Fruits:</label>
         <select id="fruits">
+          <option value="" disabled selected>Fruits:</option>
           <option value="apple">Apple</option>
           <option value="banana">Banana</option>
           <option value="orange">Orange</option>
           <option value="strawberry">Strawberry</option>
         </select>
       </div>
+
+    <div id="vegesSelect" style="display:none;">
+      <label for="veges">Choose Vegetables:</label>
+      <select id="veges">
+        <option value="tomato">Tomato</option>
+        <option value="potato">Potato</option>
+        <option value="onion">Onion</option>
+        <option value="cucumber">Cucumber</option>
+      </select>
     </div>
-<br>
+
+
+  <div id="meatSelect" style="display:none;">
+    <label for="meats">Choose Meats:</label>
+    <select id="meats">
+      <option value="beaf">Beaf</option>
+      <option value="pork">Pork</option>
+      <option value="chicken">Chicken</option>
+      <option value="turkey">Turkey</option>
+    </select>
+  </div>
+</div>
+</div>
+</div>
+
+
 
 <h1 style="color: #333;">Recipes</h1>
 <hr>

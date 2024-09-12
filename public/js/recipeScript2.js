@@ -56,3 +56,30 @@ function showRecipes() {
 return false; // Αποτροπή υποβολής φόρμας
 
 }
+
+function showFruits() {
+    var fruitSelect = document.getElementById('fruitSelect');
+    if (fruitSelect.style.display === "none") {
+      fruitSelect.style.display = "block";
+    } else {
+      fruitSelect.style.display = "none";
+    }
+  }
+
+  function showVegetables() {
+    var VegesSelect = document.getElementById('vegesSelect');
+    if (VegesSelect.style.display === "none") {
+      VegesSelect.style.display = "block";
+    } else {
+      VegesSelect.style.display = "none";
+    }
+  }
+
+  function showMeats() {
+    var fruitSelect = document.getElementById('meatSelect');
+    if (fruitSelect.style.display === "none") {
+      fruitSelect.style.display = "block";
+    } else {
+      fruitSelect.style.display = "none";
+    }
+  }
