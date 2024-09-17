@@ -44,12 +44,19 @@ ul {
   }
 
   .container {
+    background-size: 100%;
+    background-repeat: repeat;
     box-sizing: border-box;
     margin: auto;
     width: 75%;
     padding: 16px;
     background-color: #333;
   }
+
+  .container > h1{
+    color: #f9f9f9;
+  }
+  
   
   /* Full-width input fields */
   input[type=number],select {
@@ -102,12 +109,6 @@ ul {
         text-align: center;
         padding: 10px;
       }
-.container > img {
-  width: 20vw;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .meal-plan-container {
   margin: 20px auto;

@@ -28,9 +28,8 @@
 <br>
 <div id="user1"></div>
 <form action="/submit">
- <div class="container"> 
+ <div style="background-image: url(pics/fruitPattern.jpg);" class="container"> 
     <h1>Smart Nutri-Planner Form</h1>
-    <img src="pics/fitness.png" >
         <label for="weight">Weight (Kg):</label>
         <input type="number" id="weight" name="weight" placeholder="Enter your Weight:" required>
         
@@ -48,7 +47,7 @@
             <option value="maintain">To Keep my weight</option>
         </select>
 
-        <label for="gender">Gender</label>
+        <label for="gender">Gender:</label>
         <select id="genderId" name="gender" required>
             <option value="" disabled selected>Select Gender:</option>
             <option value="male">Male</option>
@@ -75,13 +74,6 @@
             <option value="is_keto">Keto</option>
         </select>
 
-        <label for="meals_per">How many times per day do you like to eat?</label>
-        <select id="meals_perId" name="meals_per" required>
-            <option value="" disabled selected>Select:</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-
         <label for="allergy_form"> Do you have any allergies?</label>
         <div class="allergy_form">
             <label>
@@ -96,10 +88,7 @@
                 <input type="checkbox" id="cel_dis" class="checkbox" value="3">
                 Celiacs Disease
             </label>
-            <label>
-                <input type="checkbox" id="shell_all" class="checkbox" value="4">
-                Shellfish Allergy
-            </label>
+
         </div>   
         <button type="button" class="registerbtn" onclick="return storeInput()">Generate Nutrition Schedule</button>
  </div>
@@ -111,14 +100,13 @@
 <hr>
 <div class="meal-plan-container">
     <table id="meal-plan">
-        <tr><th>Δευτέρα</th><th>Τρίτη</th><th>Τετάρτη</th><th>Πέμπτη</th><th>Παρασκευή</th><th>Σάββατο</th><th>Κυριακή</th></tr>
-        <tr><td>Meal1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr> <th>Δευτέρα</th> <th>Τρίτη</th> <th>Τετάρτη</th> <th>Πέμπτη</th> <th>Παρασκευή</th> <th>Σάββατο</th> <th>Κυριακή</th> </tr>
+        <tr><td>Meal Deyteras 1</td> <td>Meal Tritis 1</td> <td>Meal Tetartis 1</td> <td>Meal Pemptis 1</td> <td>Meal Paraskevis 1</td> <td>Meal Savvatou 1</td> <td>Meal Kuriakis 1</td></tr>
         <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
         <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-        <tr><th>Daily calories:</th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+        <tr><th>Daily calories:</th><th>Daily calories:</th><th>Daily calories:</th><th>Daily calories:</th><th>Daily calories:</th><th>Daily calories:</th><th>Daily calories:</th></tr>
     </table>
 </div>
 
