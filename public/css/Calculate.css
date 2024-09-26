@@ -70,10 +70,9 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-    
+    background-color: #333; 
   }
-        
+
   li {float: left;}
         
   li a {
@@ -231,6 +230,7 @@ h2,h4{
 .userInput{
   color: #248f24;
   text-align: center;
+
 }
 
 .userInput2{

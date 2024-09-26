@@ -16,11 +16,14 @@ function showInput() {
     }
 
     const userInputElement = document.getElementById('userInput');
+    const userInputElement1 = document.getElementById('userInput1');
     const userInputElement2 = document.getElementById('userInput2');
+    
     if(gender=="male" || gender=="female"){
         calories = calculateDailyCalories(gender,weight,height,age, exercise); 
-        userInputElement.innerHTML = `<h3>You Should Eat ${calories} Calories Per Day!</h3>`;
-        userInputElement2.innerHTML = `<h3>You Should Eat ${calories} Calories Left</h3>`;
+        userInputElement.innerHTML = `<h3>To Maintain Weight you Should Eat ${calories} Calories Per Day!</h3>`;
+        userInputElement1.innerHTML = `<h3>To <b>Lose Weight</b> you must eat less than ${calories} Calories Per Day!</h3><h3>To <b>Gain Weight</b> you must eat more than ${calories} Calories Per Day!</h3>`;
+        userInputElement2.innerHTML = `<h3>You have ${calories} Calories Left</h3>`;
     }else{
         userInputElement.innerHTML = `<h3>Gender Is Not Specified! </h3>`;
     }
@@ -40,7 +43,32 @@ Super Active (very hard exercise/sports, physical job, or training): TDEE = BMR 
     }else{
         BMR = (10*weight) + (6.25*height) - (5*age) -161;
     }
-    return BMR;
+
+    let activityMultiplier;
+
+    switch (exercise) {
+        case 'sedentary': // Λίγη ή καθόλου άσκηση
+            activityMultiplier = 1.2;
+            break;
+        case 'lightly_active': // Ελαφριά άσκηση 1-3 φορές την εβδομάδα
+            activityMultiplier = 1.375;
+            break;
+        case 'moderately_active': // Μέτρια άσκηση 3-5 φορές την εβδομάδα
+            activityMultiplier = 1.55;
+            break;
+        case 'very_active': // Έντονη άσκηση 6-7 φορές την εβδομάδα
+            activityMultiplier = 1.725;
+            break;
+        case 'super_active': // Πολύ έντονη άσκηση ή φυσική εργασία
+            activityMultiplier = 1.9;
+            break;
+        default:
+            activityMultiplier = 1.2; // Βασική τιμή για Sedentary
+    }
+
+    // Υπολογισμός TDEE: BMR * πολλαπλασιαστής δραστηριότητας
+    const TDEE = BMR * activityMultiplier;
+    return TDEE;
     //algorithmos gia metrisi
     /*Ο τύπος του Mifflin-St Jeor είναι ο εξής:
 Για άντρες: BMR = (10 × βάρος σε κιλά) + (6.25 × ύψος σε εκατοστά) - (5 × ηλικία σε έτη) + 5
