@@ -14,7 +14,7 @@ app.use(express.json());
 
 const uri = "mongodb://localhost:27017";
 const dbName = 'yourNutritionistDataB';
-const collectionName = 'get-recipes';
+const collectionName = 'recipes';
 
 async function connectToDatabase() {
     const client = new MongoClient(uri);
@@ -43,10 +43,6 @@ app.get('/', async (req, res) => {
     const collection = await connectToDatabase();
     const data = await collection.find({}).toArray();
     res.json(data);
-});
-
-app.get('/', (req, res) => {
-    res.send('<h1>Welcome to the MongoDB Data Viewer</h1><a href="/data">View Data</a>');
 });
 
 app.listen(port, () => {
