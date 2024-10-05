@@ -25,6 +25,8 @@ h1{
 }
 
 .recipe-container {
+  width: 60%;
+  margin: 0 auto;
   border: 2px solid #000;
   padding: 10px;
   margin-bottom: 20px;
@@ -180,4 +182,8 @@ strong{color:#248f24;}
     margin: 10px 0;        
     width: 33vw;
   }
+  
+  .recipe-container {
+    width: 90% !important;
+}
 }
