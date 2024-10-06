@@ -53,12 +53,23 @@
 
       <div class="step">
         <label for="age">Gender:</label>
-        <p>Δώστε το Φύλο Σας</p>
+        <p>Δώστε Το Φύλο Σας</p>
         <label for="maleId">Male</label>
         <input type="radio" id="maleId" name="gender" value="male" required>
         <label for="femaleId">Female</label>
         <input type="radio" id="femaleId" name="gender" value="female" required>
         <button type="button" onclick="nextStep()">Επόμενο</button>
+    </div>
+
+    <div class="step"> 
+      <label for="age">Your Goal:</label>
+      <label for="loseId">Lose Weight</label>
+      <input type="radio" id="loseId" name="lose" value="lose" required>
+      <label for="maintainId">Maintain Weight</label>
+      <input type="radio" id="maintainId" name="maintain" value="maintain" required>
+      <label for="maintainId">Gain Weight</label>
+      <input type="radio" id="gainId" name="gain" value="gain" required>
+      <button type="button" onclick="nextStep()">Επόμενο</button>
     </div>
 
       <div class="step">
