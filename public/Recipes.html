@@ -45,10 +45,8 @@
           <option value="strawberry">Strawberry</option>
         </select>
         <button id="addFruitButton">Add Fruit</button>
-        <div style="text-align: center;">  <!-- Κεντράρουμε το περιεχόμενο -->
-          <ul id="selectedFruits" style="list-style-type: disc; text-align: left; color: #248f24; margin: 0 auto; padding: 0;">
-          </ul>
-      </div>
+        <ul id="selectedFruits" style="list-style-type: disc; text-align: left; color: #248f24; margin: 0 auto; padding: 0;">
+        </ul>
       </div>
 
     <div id="vegesSelect" style="display:none;">
@@ -59,6 +57,8 @@
         <option value="onion">Onion</option>
         <option value="cucumber">Cucumber</option>
       </select>
+      <ul id="selectedVegetables"></ul>
+      <button id="addVegetableButton">Add Vegetable</button>
     </div>
 
 
@@ -70,6 +70,9 @@
       <option value="chicken">Chicken</option>
       <option value="turkey">Turkey</option>
     </select>
+    <ul id="selectedMeats"></ul>
+    <button id="addMeatButton">Add Meat</button>
+    
   </div>
   <button id="showRecipesButton">Show Recipes</button> 
 </div>

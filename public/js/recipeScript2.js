@@ -42,10 +42,21 @@ document.addEventListener('DOMContentLoaded', function() {
       .catch(error => console.error('Error fetching recipes:', error));
 
       let selectedFruits=[];
+      let selectedVeges =[];
+      let selectedMeats =[];
+      //fruit filter mechanism
       const fruitsSelect = document.getElementById('fruits');
       const addFruitButton = document.getElementById('addFruitButton');
       const selectedFruitsList = document.getElementById('selectedFruits');
       const showRecipesButton = document.getElementById('showRecipesButton');
+
+      const vegetablesSelect = document.getElementById('veges');
+      const addVegetableButton = document.getElementById('addVegetableButton');
+      const selectedVegetablesList = document.getElementById('selectedVegetables');
+
+      const meatsSelect = document.getElementById('meats');
+      const addMeatButton = document.getElementById('addMeatButton');
+      const selectedMeatsList = document.getElementById('selectedMeats');
 
       addFruitButton.addEventListener('click', function() {
         const selectedFruit = fruitsSelect.value;
@@ -54,7 +65,27 @@ document.addEventListener('DOMContentLoaded', function() {
             const li = document.createElement('li'); // Δημιουργία στοιχείου λίστας
             li.textContent = selectedFruit;
             selectedFruitsList.appendChild(li); // Προσθήκη του φρούτου στη λίστα στο UI
-        }
+        } });
+
+        addVegetableButton.addEventListener('click', function() {
+          const selectedVegetable = vegetablesSelect.value;
+          if (selectedVegetable && !selectedVeges.includes(selectedVegetable)) {
+              selectedVeges.push(selectedVegetable);
+              const li = document.createElement('li'); // Δημιουργία στοιχείου λίστας
+              li.textContent = selectedVegetable;
+              selectedVegetablesList.appendChild(li);
+          }
+        });
+      
+        addMeatButton.addEventListener('click', function() {
+            const selectedMeat = meatsSelect.value;
+            if (selectedMeat && !selectedMeats.includes(selectedMeat)) {
+                selectedMeats.push(selectedMeat);
+                const li = document.createElement('li'); // Δημιουργία στοιχείου λίστας
+                li.textContent = selectedMeat;
+                selectedMeatsList.appendChild(li);
+            }
+        });
 
         showRecipesButton.addEventListener('click', function() {
           fetch('http://localhost:3000') // Υποθέτουμε ότι εδώ επιστρέφονται όλες οι συνταγές
@@ -62,10 +93,11 @@ document.addEventListener('DOMContentLoaded', function() {
               .then(data => {
                   const recipeList = document.getElementById('recipe-list');
                   recipeList.innerHTML = ''; // Καθαρισμός της λίστας συνταγών
+                  const selectedIngredients =[...selectedFruits, ...selectedVeges , ...selectedMeats];
                   
                   // Φιλτράρουμε τις συνταγές με βάση τα επιλεγμένα φρούτα
                   const filteredRecipes = data.filter(recipe => {
-                      return selectedFruits.some(fruit => recipe.ingredientsForFiltering.includes(fruit));
+                      return selectedIngredients.some(fruit => recipe.ingredientsForFiltering.includes(fruit));
                   });
   
                   // Εμφανίζουμε τις φιλτραρισμένες συνταγές
@@ -107,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
               .catch(error => console.error('Error fetching recipes:', error));
       });
     }); 
-});
+
 
 
 function showFruits() {
