@@ -29,7 +29,7 @@
 <br>
     <div class="container">
       <h1>Choose Category</h1>
-      <img src="pics/meal.png" >
+      <img style="margin-bottom: 10px;" src="pics/book.png" >
       <ul class="recipeNav" id="recipeNav">
         <li><a href="#" onclick="showFruits()">Fruits</a></li>
         <li><a href="#" onclick="showVegetables()">Vegetables</a></li>
@@ -52,6 +52,7 @@
     <div id="vegesSelect" style="display:none;">
       <label for="veges">Choose Vegetables:</label>
       <select id="veges">
+        <option value="" disabled selected>Vegetables:</option>
         <option value="tomato">Tomato</option>
         <option value="potato">Potato</option>
         <option value="onion">Onion</option>
@@ -61,10 +62,10 @@
       <button id="addVegetableButton">Add Vegetable</button>
     </div>
 
-
   <div id="meatSelect" style="display:none;">
     <label for="meats">Choose Meats:</label>
     <select id="meats">
+      <option value="" disabled selected>Meats:</option>
       <option value="beaf">Beaf</option>
       <option value="pork">Pork</option>
       <option value="chicken">Chicken</option>
@@ -74,7 +75,7 @@
     <button id="addMeatButton">Add Meat</button>
     
   </div>
-  <button id="showRecipesButton">Show Recipes</button> 
+  <button class="button-56" role="button" id="showRecipesButton">Show Recipes</button> 
 </div>
 </div>
 </div>

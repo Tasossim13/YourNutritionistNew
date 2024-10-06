@@ -160,6 +160,8 @@ footer{
 strong{color:#248f24;}
 
 .container > div > select{
+  width: 30vw;
+  height: 30px;
   text-align: center;
   background-color: #248f24;
   color: #f9f9f9;
@@ -183,6 +185,79 @@ button{
   margin-right: auto;
   display: block;
   margin-top: 20px;
+  cursor: pointer;
+}
+
+#addFruitButton,#addVegetableButton,#addMeatButton{
+  background-color: #248f24;
+  color: white;
+  border-radius: 8px;
+  border: 2px solid #111;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+#addFruitButton:hover, #addVegetableButton:hover, #addMeatButton:hover {
+  transform: scale(1.1); /* Μεγέθυνση του κουμπιού κατά 10% */
+}
+
+#addFruitButton:active, #addVegetableButton:active, #addMeatButton:active {
+  transform: scale(1); /* Επαναφορά στο κανονικό μέγεθος όταν πατιέται */
+}
+
+.button-56 {
+  align-items: center;
+  background-color: #111;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-family: sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.button-56:after {
+  background-color: #248f24;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #248f24;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
 }
 
 @media (max-width: 600px) {
