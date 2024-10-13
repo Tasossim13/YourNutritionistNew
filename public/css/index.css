@@ -103,25 +103,24 @@ li a {
   border-radius: 5px;
 }
 
+.article-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 10px;
+}
 
 .article-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  flex-direction: column;
   align-items: center;
   gap: 20px;
-  box-sizing: border-box;
-  flex: 0 1 calc(50% - 40px);
   margin-top: 30px;
-  width: 49%;
+  width: 30%;
   text-align: center;
   margin: 20px;
   border: 2px solid black;
   border-radius: 8px;
   padding: 1px;
-  max-width: 1000px;
-  margin: 0 auto;
   margin-top: 30px;
 }
 
@@ -212,4 +211,3 @@ figcaption{
   max-height: 500px; /* Διάλεξε ένα αρκετά μεγάλο max-height */
   opacity: 1;
 }
-
