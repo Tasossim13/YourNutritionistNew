@@ -83,8 +83,6 @@ ul {
   overflow: hidden;
 }
       
-li {float: left;}
-      
 li a {
   display: block;
   text-align: center;
@@ -112,7 +110,6 @@ li a {
 }
 
 .article-container {
-
   align-items: center;
   gap: 20px;
   margin-top: 30px;
@@ -136,7 +133,15 @@ li a {
   padding: 10px;
 }
 
-.article-container > div > p {
+#content1{
+  display: none;
+}
+
+#content2{
+  display: none;
+}
+
+#content3{
   display: none;
 }
 
@@ -147,6 +152,15 @@ li a {
   margin-top: 20px;
   cursor: pointer;
   border-radius: 8px;
+}
+
+ol.s {
+  list-style-type: inherit;
+  display: block;
+  float: none;
+  color:#333;
+  padding-left: 20px;
+  margin: 0%;
 }
 
 footer {
