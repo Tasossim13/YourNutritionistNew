@@ -111,13 +111,14 @@ li a {
 }
 
 .article-container {
+  background-color: #333;
   align-items: center;
   gap: 20px;
   margin-top: 30px;
   width: 30%;
   text-align: center;
   margin: 20px;
-  border: 2px solid black;
+  border: 3px solid #248f24;
   border-radius: 8px;
   padding: 1px;
   margin-top: 30px;
@@ -130,7 +131,8 @@ li a {
 }
 
 .article-container h2{
-  color:#333;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:white;
   padding: 10px;
 }
 
@@ -157,13 +159,19 @@ li a {
 }
 
 ol.s {
+  text-align: left;
   list-style-type: inherit;
   display: block;
   float: none;
-  color:#333;
+  color:white;
   padding-left: 20px;
   margin: 0%;
   padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+ol > li {
+  padding: 3px;
 }
 
 footer {
