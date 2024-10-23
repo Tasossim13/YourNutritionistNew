@@ -114,13 +114,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     showStep(currentStep);
 
     let count = calories;
-    const selectElement = document.getElementById('fruits');
+    const selectElementFruits = document.getElementById('fruits');
     const userInputElement2 = document.getElementById('userInput2');
 
-    selectElement.addEventListener('change', function() {
+    selectElementFruits.addEventListener('change', function() {
         let subtractValue = 0;
 
-        switch (selectElement.value) {
+        switch (selectElementFruits.value) {
             case 'apple':
                 subtractValue = 100; 
                 break;
@@ -142,6 +142,75 @@ document.addEventListener('DOMContentLoaded', (event) => {
             userInputElement2.innerHTML = `<h3>You Have ${calories} Calories Left</h3>`; // Ενημέρωση του υπόλοιπου
         }
     });
+
+    const selectElementVeges = document.getElementById('vegetables');
+    selectElementVeges.addEventListener('change', function() {
+    switch (selectElementVeges.value) {
+        case 'onion':
+            subtractValue = 100; 
+            break;
+        case 'letuce':
+            subtractValue = 200; 
+            break;
+        case 'tomato':
+            subtractValue = 300; 
+            break;
+        case 'cucumber':
+            subtractValue = 400; 
+            break;
+        default:
+            subtractValue = 0;
+    }
+
+    if (calories >= subtractValue) {  // Εξασφαλίζει ότι ο αριθμός δεν θα πάει κάτω από το μηδέν
+        calories -= subtractValue; // Αφαίρεση συγκεκριμένου αριθμού
+        userInputElement2.innerHTML = `<h3>You Have ${calories} Calories Left</h3>`; // Ενημέρωση του υπόλοιπου
+    }
+});
+
+const selectElementMeals = document.getElementById('meals');
+selectElementMeals.addEventListener('change', function() {
+switch (selectElementMeals.value) {
+    case 'chickenPotato':
+        subtractValue = 100; 
+        break;
+    case 'macaroniTomato':
+        subtractValue = 200; 
+        break;
+    default:
+        subtractValue = 0;
+}
+
+if (calories >= subtractValue) {  // Εξασφαλίζει ότι ο αριθμός δεν θα πάει κάτω από το μηδέν
+    calories -= subtractValue; // Αφαίρεση συγκεκριμένου αριθμού
+    userInputElement2.innerHTML = `<h3>You Have ${calories} Calories Left</h3>`; // Ενημέρωση του υπόλοιπου
+}
+});
+
+const selectElementDrinks = document.getElementById('drinks');
+selectElementDrinks.addEventListener('change', function() {
+switch (selectElementDrinks.value) {
+    case 'freddoNoSugar':
+        subtractValue = 100; 
+        break;
+    case 'freddoLowSugar':
+        subtractValue = 200; 
+        break;
+    case 'freddoHalfSugar':
+        subtractValue = 200; 
+        break;
+    case 'freddoFullSugar':
+        subtractValue = 200; 
+        break;
+    default:
+        subtractValue = 0;
+}
+
+if (calories >= subtractValue) {  // Εξασφαλίζει ότι ο αριθμός δεν θα πάει κάτω από το μηδέν
+    calories -= subtractValue; // Αφαίρεση συγκεκριμένου αριθμού
+    userInputElement2.innerHTML = `<h3>You Have ${calories} Calories Left</h3>`; // Ενημέρωση του υπόλοιπου
+}
+});
 });
 
 

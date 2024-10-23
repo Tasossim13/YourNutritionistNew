@@ -39,7 +39,7 @@
       </div>
       <div class="step">
           <label for="height">Height (Cm):</label>
-          <p>Δώστε το βάρος σας σε Εκατοστά</p>
+          <p>Δώστε το ύψος σας σε Εκατοστά</p>
           <input type="number" id="height" name="heightData" required>
           <button type="button" onclick="nextStep()">Επόμενο</button>
       </div>
@@ -62,12 +62,11 @@
     </div>
 
     <div class="step"> 
-      <label for="age">Your Goal:</label>
-      <label for="loseId">Lose Weight</label>
+      <label for="loseId">Θέλω να χάσω βάρος</label>
       <input type="radio" id="loseId" name="lose" value="lose" required>
-      <label for="maintainId">Maintain Weight</label>
+      <label for="maintainId">Θέλω να διατηρήσω βάρος</label>
       <input type="radio" id="maintainId" name="maintain" value="maintain" required>
-      <label for="maintainId">Gain Weight</label>
+      <label for="maintainId">Θέλω να πάρω βάρος</label>
       <input type="radio" id="gainId" name="gain" value="gain" required>
       <button type="button" onclick="nextStep()">Επόμενο</button>
     </div>
@@ -102,31 +101,31 @@
       <img src="pics/fruit.png" alt="Photo 1" class="photo">
       <label for="fruits">Fruits</label>
       <select name="fruits" id="fruits">
-        <option disabled selected>Select Fruits:</option>
-        <option value="apple">Apple</option>
-        <option value="banana">Banana</option>
-        <option value="mango">Mango</option>
-        <option value="watermelon">Watermelon</option>
+        <option disabled selected>Διαλέξτε Φρούτο:</option>
+        <option value="apple">Μήλο</option>
+        <option value="banana">Μπανάνα</option>
+        <option value="mango">Μάνγκο</option>
+        <option value="watermelon">Καρπούζι</option>
       </select>
   </div>
   <div class="photo-container">
       <img src="pics/vegetable.png" alt="Photo 2" class="photo">
       <label for="vegetables">Vegetables</label>
       <select name="vegetables" id="vegetables">
-        <option disabled selected>Select Vegetables:</option>
-        <option value="tomato">1 Tomato</option>
-        <option value="cucumber">1 Cucumber</option>
-        <option value=""></option>
-        <option value=""></option>
+        <option disabled selected>Διαλέξτε Λαχανικό:</option>
+        <option value="cucumber">Αγγούρι</option>
+        <option value="onion">Κρεμμύδι</option>
+        <option value="letuce">Λάχανο</option>
+        <option value="tomato">Ντομάτα</option>
       </select>
   </div>
   <div class="photo-container">
       <img src="pics/meal.png" alt="Photo 3" class="photo">
       <label for="meals">Meals</label>
       <select name="meals" id="meals">
-        <option disabled selected>Select Meals:</option>
-        <option value=""></option>
-        <option value=""></option>
+        <option disabled selected>Διαλέξτε Γεύμα:</option>
+        <option value="chickenPotato">Κοτόπουλο με Ψητές πατάτες</option>
+        <option value="macaroniTomato">Μακαρόνια με σάλτσα ντομάτας</option>
         <option value=""></option>
         <option value=""></option>
       </select>
@@ -135,11 +134,11 @@
       <img src="pics/drink.png" alt="Photo 4" class="photo">
       <label for="drinks">Drinks</label>
       <select name="drinks" id="drinks">
-        <option disabled selected>Select Drinks:</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
+        <option disabled selected>Διαλέξτε Ρόφημα:</option>
+        <option value="freddoNoSugar">Freddo Espresso Σκέτος</option>
+        <option value="freddoLowSugar">Freddo Espresso με ολίγη</option>
+        <option value="freddoHalfSugar">Freddo Espresso μέτριος</option>
+        <option value="freddoFullSugar">Freddo Espresso γλυκός</option>
       </select>
   </div>
 </div>
